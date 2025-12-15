@@ -1,89 +1,215 @@
 <!DOCTYPE html>
-<div class="nav-container">
-<div class="logo">NURA</div>
-<ul class="nav-links">
-<li><a href="#about">Loyiha</a></li>
-<li><a href="#how">Qanday ishlaydi</a></li>
-<li><a href="#roadmap">Roadmap</a></li>
-<li><a href="#investors">Investorlar</a></li>
-<li><a href="#contact">Aloqa</a></li>
-</ul>
-</div>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NURA — Dorilarni tekshiruvchi qurilma</title>
+
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --card: rgba(255,255,255,0.08);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #4f46e5;
+      --accent-soft: rgba(79,70,229,0.2);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(1200px 600px at 70% -10%, #1e293b, var(--bg));
+      color: var(--text);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(11,15,26,0.6);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 18px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 20px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 28px;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: white; }
+
+    .container { max-width: 1200px; margin: auto; padding: 80px 48px; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #c7d2fe;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 30px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 20px 40px rgba(79,70,229,0.35);
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 420px;
+      filter: drop-shadow(0 40px 80px rgba(0,0,0,0.6));
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+
+    section h2 {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    section p { color: var(--muted); max-width: 720px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .card h3 { margin-top: 0; }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero img { margin: auto; }
+      .grid, .roadmap { grid-template-columns: 1fr; }
+      nav { padding: 18px 24px; }
+      .container { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">NURA</div>
+  <div>
+    <a href="#about">Loyiha</a>
+    <a href="#how">Qanday ishlaydi</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#investors">Investorlar</a>
+  </div>
 </nav>
 
-
-<div class="container">
-
-
-<section id="about" class="hero">
-<div>
-<span class="badge">HealthTech · Pilot bosqich</span>
-<h1>Nura — dorilarni xavfsiz va ishonchli tekshiruvchi qurilma</h1>
-<p>
-Nura — infraqizil texnologiyaga asoslangan zamonaviy qurilma bo‘lib,
-dorilarning xavfsizligi va mosligini tezkor baholash imkonini beradi.
-</p>
+<div class="container hero">
+  <div>
+    <span class="badge">HealthTech · Pilot bosqich</span>
+    <h1>Dorilarni xavfsiz va ishonchli tekshirish</h1>
+    <p>NURA — infraqizil spektr tahlili asosida dorining mosligi va xavfsizligini bir necha soniyada baholovchi portativ qurilma.</p>
+    <a class="cta" href="#investors">Investorlar uchun</a>
+  </div>
+  <div>
+    <img src="picture.png" alt="NURA qurilmasi" />
+  </div>
 </div>
-<div class="hero-card">
-<img src="picture.png" alt="Nura qurilmasi" class="hero-image" />
+
+<div id="about" class="container">
+  <h2>Loyiha haqida</h2>
+  <p>Soxta va sifatsiz dorilar global muammo. NURA oddiy foydalanuvchi va dorixonalar uchun laboratoriyasiz dastlabki tekshiruv imkonini beradi.</p>
 </div>
-</section>
 
-
-<section id="how">
-<h2>Qanday ishlaydi?</h2>
-<div class="grid">
-<div class="card"><h3>1. Dorini joylash</h3><p>Dori maxsus kamera ichiga joylanadi.</p></div>
-<div class="card"><h3>2. Spektr skanerlash</h3><p>Infraqizil nur orqali spektr olinadi.</p></div>
-<div class="card"><h3>3. Solishtirish</h3><p>Ma’lumotlar bazasi bilan taqqoslanadi.</p></div>
-<div class="card"><h3>4. Natija</h3><p>Oddiy va tushunarli xulosa chiqariladi.</p></div>
+<div id="how" class="container">
+  <h2>Qanday ishlaydi</h2>
+  <div class="grid">
+    <div class="card"><h3>1. Skanerlash</h3><p>Dori qurilmaga joylanadi va infraqizil nur bilan yoritiladi.</p></div>
+    <div class="card"><h3>2. Tahlil</h3><p>Spektr maʼlumotlari sensor orqali olinadi.</p></div>
+    <div class="card"><h3>3. Natija</h3><p>Algoritm xavfsizlik va moslikni baholaydi.</p></div>
+  </div>
 </div>
-</section>
 
-
-<section id="roadmap">
-<h2>Roadmap (6–12 oy)</h2>
-<div class="grid">
-<div class="card"><h3>0–3 oy</h3><p>MVP yakunlash va laboratoriya testlari.</p></div>
-<div class="card"><h3>3–6 oy</h3><p>Pilot dorixonalar bilan sinov.</p></div>
-<div class="card"><h3>6–12 oy</h3><p>Mini-seriyali ishlab chiqarish va AI modelini yaxshilash.</p></div>
+<div id="roadmap" class="container">
+  <h2>Roadmap</h2>
+  <div class="roadmap">
+    <div class="card">🎯 Prototype</div>
+    <div class="card">🧪 Pilot test</div>
+    <div class="card">📱 Mobil ilova</div>
+    <div class="card">🌍 Mass market</div>
+  </div>
 </div>
-</section>
 
-
-
-
-<section id="investors">
-<h2>Investorlar uchun</h2>
-<p>
-Nura pilot loyihalar, grantlar va strategik investorlar bilan
-hamkorlikka ochiq. Maqsad — dorilar xavfsizligini ommaviy qilish.
-</p>
-<p>
-Bog‘lanish uchun to‘g‘ridan-to‘g‘ri elektron pochta orqali murojaat qilishingiz mumkin.
-</p>
-<a href="mailto:notmuzaff@gmail.com" style="display:inline-block;margin-top:16px;padding:14px 28px;border-radius:999px;background:var(--accent);color:#020617;font-weight:600;">Investor sifatida bog‘lanish</a>
-</section>
-
-
-<section class="cta">
-<h2>Pilot loyihada qatnashing</h2>
-<p>Dorixona yoki tashkilotingizda Nurani sinab ko‘ring.</p>
-<button>Bog‘lanish</button>
-</section>
-
-
-<section id="contact">
-<h2>Aloqa</h2>
-<p>Email: <strong>notmuzaff@gmail.com</strong></p>
-</section>
-
+<div id="investors" class="container">
+  <h2>Investorlar uchun</h2>
+  <p>Biz sog‘liqni saqlash sohasida real muammoni hal qilmoqdamiz va pilot bosqich uchun strategik hamkor izlayapmiz.</p>
+  <a class="cta" href="mailto:notmuzaff@gmail.com">Bog‘lanish</a>
+</div>
 
 <footer>
-© 2025 Nura — HealthTech demo platforma
+  © 2025 NURA · Uzbekistan
 </footer>
 
-
-</div>
 </body>
 </html>
